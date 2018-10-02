@@ -62,12 +62,17 @@ static int rotation_index(const char *rot_name) {
 
 	for (i = 0; i < MAX_ROTATIONS; i++)
 		if (strcasecmp(rot_name, rotations[i]) == 0) {
+#if DEBUG
 			fprintf(stderr, "rotation %d\n", i);
+#endif
 			return i;
 		}
 
+#if DEBUG
 	fprintf(stderr, "rotation -1\n");
-	return -1;
+#endif
+
+	return 0;
 }
 
 static void matrix_set(Matrix *m, int row, int col, float val) {
