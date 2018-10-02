@@ -42,7 +42,7 @@
 #define MAX_SCREENS	(4)
 #define MAX_ROTATIONS (4)
 
-#define DEBUG 1
+#define DEBUG 0
 
 typedef struct Matrix {
     float m[9];
